@@ -4,4 +4,4 @@ def calcHora():
 
 
 salario = float(input('Informe seu salário bruto: R$'))
-print(calcHora())
+print(f'O valor da hora trabalhada e R${calcHora():.2f}.')
