@@ -12,7 +12,6 @@ while True:
         lerArquivo(arq)
     elif resposta == 2:
         cabecalho('NOVO CADASTRO')  # opção 2 cadastrar nova pessoa.
-        leitura = leiaInt('Cadastro Atual:')
         nome = str(input('Nome: '))
         idade = leiaInt('Idade:')
         cadastrar(arq, nome, idade)
