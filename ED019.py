@@ -1,39 +1,39 @@
-menor_20 = ['', 'um', 'dois', 'três', 'quatro',
-            'cinco', 'seis', 'sete', 'oito', 'nove',
-            'dez', 'onze', 'doze', 'treze', 'quatorze',
-            'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove']
+unidade = ('', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez',
+           'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove')
 
-dezenas = ['', '', 'vinte', 'trinta', 'quarenta', 'cinquenta',
-           'sessenta', 'setenta', 'oitenta', 'noventa']
+dezena = ('', '', 'vinte', 'trinta', 'quarenta', 'cinquenta', 'sesseta', 'setenta', 'oitenta', 'noventa')
 
-centenas = ['', 'cento', 'duzentos', 'trezentos', 'quatrocentos',
-            'quinhentos', 'seiscentos', 'setecentos', 'oitocentos', 'novecentos']
+centenas = ('', 'cento', 'duzentos', 'trezentos', 'quatrocentos', 'quinhentos', 'seiscentos',
+            'setecentos', 'oitocentos', 'novecentos')
+
+print('-'*45)
+print('LEIA POR EXTENSO UM NÚMERO ENTRE 0 e 999'.center(45))
+print('-'*45)
 while True:
-    pergunta = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
-    if pergunta != 'S':
-        break
+    num = int(input('- Digite um número: '))
+    print(f'\033[35mO número {num} é escrito assim: ', end='')
+    if num == 0:
+        print('zero')
+    elif num == 100:
+        print('cem')
     else:
-        numero = int(input('\033[34mDigite o número: \033[m'))
-        if numero < 0 or numero > 999:
-            print('\033[31mERRO! digite um número entre 0 e 999.\033[m')
-        else:
-            print(f'O número {numero} por extenso fica: ', end='')
-            if numero == 100:
-                print('cem')
-            elif numero == 0:
-                print('zero')
-            else:
-                if numero > 100:
-                    print(centenas[int(str(numero)[0])], end='')
-                    numero = numero - int(str(numero)[0])*100
-                    if numero != 0:
-                        print(' e', end=' ')
-                if numero < 20:
-                    print(menor_20[int(str(numero)[0])], end=' ')
-                    numero = 0
-                elif numero >= 20:
-                    print(dezenas[int(str(numero)[0])], end=' ')
-                    numero = numero - int(str(numero)[0])*10
-                if numero != 0:
-                    print('e', menor_20[numero])
-print('Fim...')
+        if num > 100:
+            print(centenas[int(str(num)[0])], end=' ')
+            num = num - int(str(num)[0]) * 100
+            if num != 0:
+                print(' e', end=' ')
+        if 0 < num < 20:
+            print(unidade[int(str(num))], end=' ')
+            num = 0
+        elif num >= 20:
+            print(dezena[int(str(num)[0])], end=' ')
+            num = num - int(str(num)[0]) * 10
+            if num != 0:
+                print('e', unidade[num])
+            print('\033[m')
+            pergunta = str(input('Deseja continuar? [S/N]')).strip().upper()[0]
+            if pergunta != 'S':
+                break
+print('Finalizando....')
+print()
+print('\033[31mBy TecVander v1.5')
