@@ -1,4 +1,4 @@
-unidade = ('', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez',
+unidade = ('', 'um ', 'dois ', 'três ', 'quatro ', 'cinco ', 'seis ', 'sete', 'oito', 'nove', 'dez',
            'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove')
 
 dezena = ('', '', 'vinte', 'trinta', 'quarenta', 'cinquenta', 'sesseta', 'setenta', 'oitenta', 'noventa')
@@ -36,4 +36,4 @@ while True:
                 break
 print('Finalizando....')
 print()
-print('\033[31mBy TecVander v1.5')
+print('\033[31m By TecVander v1.5')
