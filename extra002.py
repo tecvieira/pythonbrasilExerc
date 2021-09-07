@@ -13,13 +13,13 @@ print('-' * 30)
 opcao = 0
 nomearq = 'vista.txt'
 while opcao != 3:
-    print('Escolha sua opção:')
-    print("""\033[34m
+    print('\033[34mEscolha sua opção:')
+    print("""
     01 - LISTAR SERVIÇOS
     02 - CADASTRAR NOVO SERVIÇO  
     03 - SAIR DO SISTEMA
-    \033[m""")
-    opcao = int(input('O que deseja fazer?'))
+    """)
+    opcao = int(input('O que deseja fazer?\033[m'))
     if opcao <= 0 or opcao >= 4:
         print('\033[31mERRO!!! selecione uma opção válida.\033[m')
     elif opcao == 1:
