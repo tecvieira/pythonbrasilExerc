@@ -19,7 +19,6 @@ while opcao != 3:
     02 - CADASTRAR NOVO SERVIÇO  
     03 - SAIR DO SISTEMA
     \033[m""")
-    print()
     opcao = int(input('O que deseja fazer?'))
     if opcao <= 0 or opcao >= 4:
         print('\033[31mERRO!!! selecione uma opção válida.\033[m')
