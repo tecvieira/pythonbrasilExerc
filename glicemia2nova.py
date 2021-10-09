@@ -67,7 +67,7 @@ def lerArquivo(nome):
         cabecalho('GLICEMIA , DATA , HORA')
         for linha in a:
             dado = linha.split(';')
-            dado[1]=dado[1].replace('\n', '')
+            dado[1] = dado[1].replace('\n', '')
             print(f'{dado[0]:<3}{dado[1]:>20}')
     finally:
         a.close()
@@ -80,7 +80,7 @@ def cadastrar(arq, leitura='não informada', datahora=0):
         print('\033[31mHouve um ERRO na abertura do arquivo\033[m')
     else:
         try:
-            a.write(f'{leitura};  { datatext()}\n')
+            a.write(f'{leitura} ; { datatext()}\n')
         except:
             print('\033[31mHouve ERRO na escrita de dados!')
         else:
@@ -90,7 +90,7 @@ def cadastrar(arq, leitura='não informada', datahora=0):
 
 def datatext():
     data = datetime.now()
-    datatext = data.strftime(', %d/%m/%Y , %H:%M hs')
+    datatext = data.strftime(', %d/%m/%Y , %H:%M ')
     return datatext
 
 
