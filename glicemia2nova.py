@@ -67,8 +67,8 @@ def lerArquivo(nome):
         cabecalho('GLICEMIA , DATA , HORA')
         for linha in a:
             dado = linha.split(';')
-            dado[1] = dado[1].replace('\n', '')
-            print(f'{dado[0]:<3}{dado[1]:>20}')
+            dado[2] = dado[2].replace('\n', '')
+            print(f'{dado[0]:<3}{dado[1]}{dado[2]}')
     finally:
         a.close()
 
@@ -90,7 +90,7 @@ def cadastrar(arq, leitura='não informada', datahora=0):
 
 def datatext():
     data = datetime.now()
-    datatext = data.strftime(', %d/%m/%Y , %H:%M ')
+    datatext = data.strftime(' %d/%m/%Y ; %H:%M ')
     return datatext
 
 
