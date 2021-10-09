@@ -80,7 +80,7 @@ def cadastrar(arq, leitura='não informada', datahora=0):
         print('\033[31mHouve um ERRO na abertura do arquivo\033[m')
     else:
         try:
-            a.write(f'{leitura} ; { datatext()}\n')
+            a.write(f'{leitura}; { datatext()}\n')
         except:
             print('\033[31mHouve ERRO na escrita de dados!')
         else:
