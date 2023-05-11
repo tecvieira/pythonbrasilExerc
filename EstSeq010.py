@@ -1,0 +1,6 @@
+num = int(input('Informe o primeiro número inteiro: '))
+num2 = int(input('Informe o segundo número inteiro:'))
+num3 = float(input('Informe um número real:'))
+print(f'O dobro de {num} pelo produto da metade do segundo {num2} é igual a {(num * 2) * (num2 / 2)}')
+print(f'O triplo do primeiro {num}, somado ao terceiro {num3} é igual a {(3 * num) + num3}')
+print(f'O número real {num3} ao cubo têm como resultado {num3 ** 3}')
