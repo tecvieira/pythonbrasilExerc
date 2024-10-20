@@ -1,0 +1,17 @@
+"""listas = list(range(11))
+soma = 0
+for elemento in listas:
+    if elemento % 2 != 0:
+        soma += elemento
+print(listas)
+print(soma)"""
+
+carrinho = []
+produto = ' '
+while produto != 'sair':
+    print('Adicione um produto na lista ou sair para finalizar.')
+    produto = input()
+    if produto != 'sair':
+        carrinho.append(produto)
+print(carrinho)
+
